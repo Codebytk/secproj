@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<div class="pro" th:each="shop:${shop}">
+        <ul>
+            <li><a th:href="@{|/shop/detail/${shop.idx}|}"><img src="/img/prod1.jpg"></a></li>
+        </ul>
+        <ul id="font">
+            <li data-th-text="${#numbers.formatInteger(shop.price, 3, 'COMMA') + '원'}"></li>
+            <li><a class="company" th:text="${shop.itemname}"></a><a th:text="${shop.subject}"></a></li>
+        </ul>
+        <ul class="buy">
+            <li><a th:href="@{|/shop/detail/${shop.idx}|}">구 매 하 기</a></li>
+            <li>장 바 구 니</li>
+            <li>찜 하 기  &nbsp;<a class="hart" style="cursor: pointer;">♡</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

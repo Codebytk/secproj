@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/login_form.css}">
+</head>
+<body>
+<div layout:fragment="content">
+	<form th:action="@{/board/create}" th:object="${createBoardForm}" enctype="multipart/form-data" method="post">
+
+	<div role="alert" th:if="${#fields.hasAnyErrors()}">
+	<div th:each="err:${#fields.allErrors()}" th:text="${err}"></div>
+	</div>
+		<div>
+			<label for="subject">제목</label>
+			<input type="text" name="subject" th:field="*{subject}">
+		</div>
+		<div>
+			<label for="content">내용</label>
+			<textarea rows="30" cols="50" type="text" name="content" th:field="*{content}"></textarea>
+		</div>
+		<div><input type="file" name="file"></div>
+		<div>
+			<input type="submit" value="등록하기">
+		</div>
+
+	</form>
+
+</div>
+</body>
+</html>

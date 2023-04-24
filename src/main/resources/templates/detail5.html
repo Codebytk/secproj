@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/detail5.css}">
+</head>
+ <div layout:fragment="content">
+        <div style="overflow: hidden;" class="board">
+          <div class="container">
+              <div class="inner" th:each="img:${detailimg}"><img th:src="${img.url}" style="width: 700px; height: 400px;"></div>
+             </div>
+        </div>
+        <div class="button" style="margin-right: 470px; margin-top: 20px;">
+            <a th:each="img,i : ${detailimg}"><button th:class="@{|button${i.count}|}"><img th:src="${img.url}" style="width: 100px; height: 70px;"></button></a>
+        </div>
+   <script>
+          document.querySelector('.button2').addEventListener('click', function(){
+            document.querySelector('.container').style.transform= 'translate(-700px)';
+          });
+    
+          document.querySelector('.button3').addEventListener('click', function(){
+            document.querySelector('.container').style.transform= 'translate(-1400px)';
+          });
+          
+          document.querySelector('.button1').addEventListener('click', function(){
+            document.querySelector('.container').style.transform= 'translate(0px)';
+          });
+        </script>
+        <div class="proimfor">
+            <ul class="block">
+                <li style="height: 50px;">
+                    <a style="font-size: 21px;">[[${shop.itemname}]]</a>
+                </li>
+                <hr>
+                <li>
+                    <ul class="inline">
+                        <li><a>가격 : </a><a data-th-text="${#numbers.formatInteger(shop.price, 3, 'COMMA') + '원'}"></a><a class="hart">♡</a></li>
+                    </ul>
+                </li>
+                <hr>
+                <li style="background-color: rgb(226, 223, 223); height: 30px; text-align: center;">
+                     <a style="color: rgb(116, 116, 219); font-size: 18px; padding: 5px;">내일 출발 예정</a> - CJ 택배
+                </li>
+                <hr>
+                <li class="del1">
+                    <ul class="bar">
+                        <a>택배 - 주문시 결제 </a><a class="dropbtn" style="font-size: 20px; cursor: pointer;">▼</a>
+                        <li><ul class="del2"><li>추가 배송비</li><li>제주도 3000 원 /기타도서 7,000원</li></ul></li>
+                        <li><ul class="del2"><li>묵음 배송</li><li>가능</li></ul></li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <select name="선택" id="option" style="width: 460px; height: 50px;">
+                        <option value="선택" style="font-size: 20px;">선택</option>
+                        <option value="1" style="font-size: 20px;">스노우엣지</option>
+                        <option value="2" style="font-size: 20px;">피나클 롱스패츠</option>
+                        <option value="3" style="font-size: 20px;">그루브에이터 숏스패츠</option>
+                    </select>
+                </li>
+                <hr>
+                <li>
+                    <ul class="buybtn">
+                        <li><img src="/img/장바구니.jpg" alt=""></li>
+                        <li style="margin-left: 10px;"><img src="/img/구매하기1.jpg" alt=""></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <script>
+            $(document).ready(function(){
+            $('.hart').click(function(){
+                if(this.text=="♡"){
+                    $(this).text("♥");
+                    $(this).css('color','red');
+                }else if(this.text=="♥"){
+                    $(this).text("♡");
+                    $(this).css('color','black');
+                }                
+            });
+        });
+        $(document).ready(function(){
+            $('.dropbtn').click(function(){
+                if(this.text=="▼"){
+                    $(this).text("▲");
+                    $('.del1').height('180px');
+                }else if(this.text=="▲"){
+                    $(this).text("▼");
+                    $('.del1').height('30px');
+                }
+            });
+        });
+        </script>
+        <div style="margin-top: 120px; font-size: 50px;">
+            <a>상품 상세 정보</a>
+        </div>
+        <div>
+        	<a style="font-size: 25px;" id="notice">상품설명</a>
+        </div>
+        <div>
+        	<a style="font-size: 20px;">[[${shop.subject}]]</a>
+        </div>
+        <div>
+        	<a style="font-size: 25px;" id="detail">상품 상세설명</a>
+        </div>
+        <div>
+        	<a style="font-size: 20px;">[[${shop.subject}]]</a>
+        </div>
+        </main>
+        <footer>
+            <div class="footerline">
+                <hr>
+            </div>
+            <span class="logo2">
+                <img src="/img/logo.png">
+            </span>
+            <div class="re">태경컴퍼니Ⓡ 경기도 고양시 000 000 000<br>옥빛 산악회 회원 모집 010-0000-000<br> ㅎㅎ<br> ㅎㅎ</div>
+            <div class="social-media">
+                <img src="/img/facebook.jpg">
+                <img src="/img/instargram.jpg">
+                <img src="/img/KakaoTalk.jpg">
+            </div>
+        </footer>
+   </div>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/static/css/detail3.css}">   <script>
+        setInterval(function(){
+          $('#slide1>ul').delay(2500);
+          $('#slide1>ul').animate({marginLeft: "-1200px"})
+          $('#slide1>ul').delay(2500);
+          $('#slide1>ul').animate({marginLeft: "-2400px"})
+          $('#slide1>ul').delay(2500);
+          $('#slide1>ul').animate({marginLeft: "0px"})
+        });
+    </script>
+</head>
+<body>
+<div layout:fragment="content">
+
+    <header>
+        <span>
+            <a href="index.html"><image src="../static/img/logo.png"></a>
+        </span>
+        <span class="name">I.O.Mountain</span>
+        <div class="login">
+            <a class="btn" href="#pop1" id="btn" style="margin-right: 300px;">로그인</a>
+            <a href=""id="btn"style="margin-right: 200px;">회원가입</a>
+            <a href=""id="btn"style="margin-right: 100px;">문의하기</a>
+            <a href=""id="btn">마이페이지</a>
+        </div>
+        <div class="popup" id="pop1">
+            <table class="logos">
+                <tr><td colspan="3" style="text-align: center;"><h2>로그인</h2></td></tr>
+                <tr>
+                    <td colspan="3"><input type="text" placeholder="아이디를 입력해 주세요" size="47" class="input" style="height: 50px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><input type="password" placeholder="비밀번호를 입력해 주세요"size="47" class="input" style="height: 50px;"></td>
+                </tr>
+                <tr>
+                    <td colspan="3"><button style="width: 350px; height: 50px;">로그인</button></td>
+                </tr>
+                <tr>
+                    <td>회원가입</td><td colspan="2">아이디/비밀번호 찾기</td>
+                </tr>
+                <tr>
+                <td colspan="3">다른 방법으로 로그인</td>
+                </tr>
+                <tr>
+                    <td><../static src="../static/img/facebook.jpg" style="width: 70px; height: 70px;"></td><td colspan="2"><button  style="width: 200px; height: 50px;">페이스 북계정으로 로그인</button></td>
+                </tr>
+                <tr>
+                    <td><../static src="../static/img/google.png" style="width: 70px; height: 70px;"></td><td colspan="2"><button style="width: 200px; height: 50px;">구글 계정으로 로그인</button></td>
+                </tr>
+                <tr>
+                    <td><../static src="../static/img/KakaoTalk.jpg" style="width: 70px; height: 70px;"></td><td colspan="2"><button  style="width: 200px; height: 50px;">카카오톡계정으로 로그인</button></td>
+                </tr>
+            </table>
+            <a href="">닫기</a>
+        </div>
+        
+</header>
+<nav class="dropmenu">
+    <ul>
+        <li>
+            <a id="current"style="font-size: 18px;">날씨<../static src="../static/img/Hamburger_icon.svg.png" style="width: 20px;" class="buger"></a>
+            <ul class="submenu1">
+                <li><a>서울</a></li>
+                <li><a>강원도</a></li>
+                <li><a>전라도</a></li>
+                <li><a>경상도</a></li>
+                <li><a>제주도</a></li>
+            </ul>
+        </li>
+        <li>
+            <a id="current" style="font-size: 18px;">등산 정보<../static src="../static/img/Hamburger_icon.svg.png" style="width: 20px;" class="buger"></a>
+            <ul class="submenu1">        
+                <li><a href="detail2.html">경기도, 서울</a></li>
+                <li><a>강원도</a></li>
+                <li><a>충청도</a></li>
+                <li><a>전라도</a></li>
+                <li><a>경상도</a></li>
+            </ul>
+        </li>
+        <li>
+            <a  id="current"style="font-size: 18px;">등산맛집<../static src="../static/img/Hamburger_icon.svg.png" style="width: 20px;" class="buger"></a>
+            <ul class="submenu1">        
+                <li><a>한식</a></li>
+                <li><a>중식</a></li>
+                <li><a>양식</a></li>
+                <li><a>지역 대표음식</a></li>s
+            </ul>
+        </li>
+        <li>
+            <a  id="current"style="font-size: 18px;">등산후기</a>
+        </li>
+        <li>
+            <a id="current"style="font-size: 18px;">사진관</a>
+        </li>
+        <li>
+            <a  id="current" style="font-size: 18px;">등산 용품<../static src="../static/img/Hamburger_icon.svg.png" style="width: 20px;" class="buger"></a>
+            <ul class="submenu1">        
+                <li><a href="detail4.html">아이젠</a></li>
+                <li><a>등산스틱</a></li>
+                <li><a>등산복</a></li>
+                <li><a>등산 배낭</a></li>
+                <li><a>등산화</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+<main>
+    <div class="quickmenu">
+        <ul>
+          <li><a href="#">날씨</a></li>
+          <li><a href="#">등산정보</a></li>
+          <li><a href="#">등산맛집</a></li>
+          <li><a href="#">등산후기</a></li>
+          <li><a href="#">사진관</a></li>
+          <li><a href="#">등산용품</a></li>
+        </ul>
+    </div>
+    <script>
+    $(document).ready(function(){
+        var currentPosition = parseInt($(".quickmenu").css("top"));
+        $(window).scroll(function() {
+          var position = $(window).scrollTop(); 
+          $(".quickmenu").stop().animate({"top":position+currentPosition+"px"},300);
+        });
+    });
+      </script>
+    <div class="book">
+        <h1>북한산 관련 등산정보</h1>
+    </div>
+    <div id="index_01">
+        <div id="slide1">
+            <ul>
+                <li><a href="#"><../static src="../static/img/mountain1.jpg" alt="슬라이드1" width="1200" height="500"></a></li>
+                <li><a href="#"><../static src="../static/img/mountain2.jpg" alt="슬라이드2" width="1200" height="500"></a></li>
+                <li><a href="#"><../static src="../static/img/mountain4.jpg" alt="슬라이드3" width="1200" height="500"></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="infor2">
+        <table class="infor3">
+            <tr>
+                <td class="td1">이름</td><td>북한산</td>
+            </tr>
+            <tr>
+                <td class="td1">위치</td><td>서울특별시 종로구</td>
+            </tr>
+            <tr>
+                <td class="td1">높이</td><td>835.5m</td>
+            </tr>
+            <tr>
+                <td class="td1">설명</td><td>서울특별시와 경기도 고양시, 양주시, 의정부시에 걸쳐있는 산.<br> 북한산이라는 이름은 조선 후기에 한강 이북에 있다고 하여 붙었다. <br>별칭인 '삼각산'은 백운대, 인수봉, 만경봉의 세 봉우리가<br> 있어서 불리게 된 이름이다.<br> 예부터 주로 삼각산이라는 이름으로도 불렸지만 <br>광복 이후부터 거의 쓰이지 않게 되었다.
+                </td>
+            </tr>
+            <tr>
+                <td class="td1">난이도</td><td>★★★☆☆</td>
+            </tr>
+            <tr>
+                <td class="td1">근처 추천 맛집</td><td>이름 > 북한산손칼국수<br>위치 > 서울 은평구 대서문길 36</td>
+            </tr>
+            <tr>
+                <td class="td1">근처 추천 카페</td><td>이름 > 그 집<br>위치 > 서울 은평구 대서문길 33</td>
+            </tr>
+        </table>
+    </div>
+
+
+</main>
+
+<footer>
+    <div class="footerline">
+        <hr>
+    </div>
+    <span class="logo2">
+        <image src="../static/img/logo.png">
+    </span>
+    <div class="re">태경컴퍼니Ⓡ 경기도 고양시 000 000 000<br>옥빛 산악회 회원 모집 010-0000-000<br> ㅎㅎ<br> ㅎㅎ</div>
+    <div class="social-media">
+        <image src="../static/img/facebook.jpg">
+        <image src="../static/img/instargram.jpg">
+        <image src="../static/img/KakaoTalk.jpg">
+    </div>
+</footer>
+</div>
+</body>
+</html>

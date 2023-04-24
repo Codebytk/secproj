@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/login_form.css}">
+</head>
+<body>
+<div layout:fragment="content">
+<h1>상품 등록 페이지</h1>
+<form th:action="@{/shop/create}" th:object="${shopCreateForm}" enctype="multipart/form-data"  method="post">
+		<div>
+			<label for="itemname">상품이름</label>
+			<input type="text" name="itemname" th:field="*{itemname}">
+		</div>
+		<div>
+			<label for="price">가격</label>
+			<input type="number" name="price" th:field="*{price}">
+		</div>
+		<div>
+			<label for="subject">간단한설명</label>
+			<input type="text" name="subject" th:field="*{subject}">
+		</div>
+		<div>
+			<label for="itemdetail">상세설명</label>
+			<textarea name="itemdetail" th:field="*{itemdetail}" rows="10" cols="50"></textarea>
+		</div>
+		<div>
+			<input type="file" name="file">
+		</div>
+		<div>
+			<input type="file" name="file">
+		</div>
+		<div>
+			<input type="file" name="file">
+		</div>
+		<div>
+			<input type="submit" value="등록하기">
+		</div>
+
+
+</form>
+
+
+
+</div>
+</body>
+</html>

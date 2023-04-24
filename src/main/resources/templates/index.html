@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/index.css}">
+<script>
+        setInterval(function(){
+          $('#slide1>ul').delay(2500);
+          $('#slide1>ul').animate({marginLeft: "-1200px"})
+          $('#slide1>ul').delay(2500);
+          $('#slide1>ul').animate({marginLeft: "-2400px"})
+          $('#slide1>ul').delay(2500);
+          $('#slide1>ul').animate({marginLeft: "0px"})
+        });
+</script>
+</head>
+<body>
+<div layout:fragment="content">
+        <div id="index_01">
+        
+        <div id="slide1">
+            <ul>
+                <li><a href="#"><img src="/img/background.jpg" alt="슬라이드1" width="1200" height="500"></a></li>
+                <li><a href="#"><img src="/img/dark2.jfif" alt="슬라이드2" width="1200" height="500"></a></li>
+                <li><a href="#"><img src="/img/dark3.jpg" alt="슬라이드3" width="1200" height="500"></a></li>
+            </ul>
+        </div>
+      </div>
+    <div class="line">
+        <hr>
+    </div>
+    <div class="recommend">
+        <div>안전 수칙</div>
+        <iframe src="https://www.youtube.com/embed/w6A4eqcUaIo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        
+        <div style="margin-top: 50px;" class="buy">
+            <div>
+                <hr>
+            </div>
+            <div><h1>등산용품 구매</h1><br><a>클릭시 구매링크 이동</a></div>
+            <div class="buy2">
+            <ul class="buylist">
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod1.jpg"></li>
+                        <li  style="padding: 15px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 아이젠<br>가 격 : 15,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod2.jpg" alt=""></li>
+                        <li  style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 등산화</a><br>가 격 : 130,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod3.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 등산스틱</a><br>가 격 : 40,000</li>
+
+                    </ul>
+                </li>
+                <li class="typelist" id="clear">
+                    <ul>
+                        <li><img src="/img/prod4.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 기능티</a><br>가 격 : 40,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod5.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 등산바지</a><br>가 격 : 55,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod6.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 등산배낭</a><br>가 격 : 100,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod7.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 아이젠(1+1)</a><br>가 격 : 28,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod8.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 장갑</a><br>가 격 : 3,000</li>
+                    </ul>
+                </li>
+                <li class="typelist">
+                    <ul>
+                        <li><img src="/img/prod9.jpg" alt=""></li>
+                        <li style="padding: 10px; margin-top: 10px;"><a style="font-size: 18px;">상품명 : 양말</a><br>가 격 : 2,000</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footerline">
+            <hr>
+        </div>
+        <span class="logo2">
+            <img src="/img/logo.png">
+        </span>
+        <div class="re">태경컴퍼니Ⓡ 경기도 고양시 000 000 000<br>옥빛 산악회 회원 모집 010-0000-000<br> ㅎㅎ<br> ㅎㅎ</div>
+        <div class="social-media">
+            <img src="/img/facebook.jpg">
+            <img src="/img/instargram.jpg">
+            <img src="/img/KakaoTalk.jpg">
+        </div>
+    </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+@charset "UTF-8";
+
+
+        *{
+  margin: 0 auto; padding: 0;
+}
+
+@font-face {
+  font-family: 'Cafe24ClassicType-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Cafe24ClassicType-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+body{ 
+width: 1200px;
+height: 1200px;
+background-image: url(/img/background.jpg);
+background-repeat: repeat-x;
+font-family: Cafe24ClassicType-Regular;
+animation: scroll 50s linear infinite;
+text-align: center;
+}
+@keyframes scroll {
+  from {
+    background-position: left calc(4.84 * min(100vh, 750px)) top 0px;
+  }
+  to {
+    background-position: left 0px top 0px;
+  }
+}
+a{
+  text-decoration-line: none;
+  color: inherit;
+}
+ul{
+    list-style-type: none;
+}
+header img{
+    width: 200px;
+    margin-top: 50px;
+    height: 130px;
+}
+.name{
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+#btn{
+  float: right;
+  margin-top: -100px;
+}
+.dropmenu{
+  border:none;
+  border:0px;
+  margin:0px;
+  padding:0px;
+  font: "sans-serif";
+  }
+
+  .dropmenu ul{
+  background: #666;
+  height:100px;
+  list-style:none;
+  margin: 0;
+  padding:0;
+  }
+  
+  .dropmenu li{
+  float:left;
+  padding:0px;
+  margin-left: 50px;
+  }
+  
+  .dropmenu li a{
+  background: #666;
+  color:#fff;
+  display:block;
+  line-height:100px;
+  margin:0px;
+  padding:0px 25px;
+  text-align:center;
+  }
+  #current{
+    width: 100px;
+    font-size: 15px;
+  }
+  .dropmenu li a:hover, .dropmenu ul li:hover a{
+  background: rgb(31,31,31);
+  color:#FFFFFF;
+  }
+  .dropmenu li ul{
+  display:none; 
+  height:auto;
+  position:absolute;
+  width:150px;
+  }
+  
+  .dropmenu li:hover ul{
+  display:block;
+  }
+  
+  .dropmenu li li {
+  display:block;
+  float:none;
+  margin:0px;
+  padding:0px;
+  width:150px;
+  }
+  
+  .dropmenu li:hover li a{
+  background:none;
+  }
+  
+  .dropmenu li ul a{
+  display:block;
+  height:80px;
+  font-size:14px;
+  margin:0px;
+  padding:0px 10px 0px 15px;
+  text-align:left;
+  }
+  
+  .dropmenu li ul a:hover, .dropmenu li ul li:hover a{
+  background: rgb(151, 150, 150);
+  border:0px;
+  color:#ffffff;
+  text-decoration:none;
+  }
+.dropmenu p{
+  clear:left;
+  }

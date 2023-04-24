@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html layout:decorate="~{layout}">
+<head>
+<link rel="stylesheet" type="text/css" th:href="@{/css/login_form.css}">
+
+</head>
+<div layout:fragment="content">
+
+<form th:action="@{/member/create}" th:object="${createUserForm}" method="post">
+<div role="alert" th:if="${#fields.hasAnyErrors()}">
+	<div th:each="err:${#fields.allErrors()}" th:text="${err}"></div>
+</div>
+
+	<table>
+		<tr><td>아이디</td><td><input type="text" name="username" placeholder="아이디를 입력해주세요" id="username"></td></tr>
+		
+		<tr><td>비밀번호</td><td><input type="password" name="password1" placeholder="비밀번호를 입력해주세요"></td></tr>
+		<tr><td>비밀번호 확인</td><td><input type="password" name="password2" placeholder="비밀번호를 확인 해주세요"></td></tr>
+		<tr><td>이름</td><td><input type="text" name="Mname" placeholder="이름을 입력해주세요"></td></tr>
+		<tr><td>이메일</td><td><input type="text" name="email" placeholder="이메일를 입력해주세요"></td></tr>
+		<tr><td>휴대폰 번호</td><td><input type="number" name="phonenum" placeholder="휴대폰 번호를 입력해주세요"></td></tr>
+		<tr><td><input type="submit" value = "제출하기"></td></tr>
+	</table>
+</form>
+
+
+</div>
+</html>
